@@ -2,6 +2,11 @@
 
 A premium Real Estate Rental Mini App built for Telegram, allowing users to browse, search, and book properties directly within their favorite messaging app.
 
+## 🚀 Live Demo
+
+- **Telegram Bot**: [t.me/your_bot_username](https://t.me/your_bot_username) (Replace with your bot)
+- **Web Version**: [mini-app-pink-six.vercel.app](https://mini-app-pink-six.vercel.app)
+
 ## ✨ Features
 
 - 📱 **Telegram Mini App Integration**: Seamless experience inside Telegram.
