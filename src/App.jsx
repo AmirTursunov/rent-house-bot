@@ -8,6 +8,7 @@ import Search from './pages/Search';
 import Bookings from './pages/Bookings';
 import Profile from './pages/Profile';
 import BottomNav from './components/BottomNav';
+import TelegramRedirectModal from './components/TelegramRedirectModal';
 import { useTranslation } from 'react-i18next';
 
 const ScrollToTop = () => {
@@ -93,6 +94,7 @@ const AppContent = () => {
         </Routes>
       </main>
       {!isDetail && <BottomNav />}
+      <TelegramRedirectModal />
     </div>
   );
 };
