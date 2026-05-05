@@ -11,20 +11,9 @@ const TelegramRedirectModal = () => {
         const isTelegram = window.Telegram && window.Telegram.WebApp && window.Telegram.WebApp.initData;
         
         if (!isTelegram) {
-            // Check if user already dismissed it this session
-            const dismissed = sessionStorage.getItem('tg_modal_dismissed');
-            if (!dismissed) {
-                // Show modal after a short delay for better UX
-                const timer = setTimeout(() => setIsVisible(true), 1500);
-                return () => clearTimeout(timer);
-            }
+            setIsVisible(true);
         }
     }, []);
-
-    const handleClose = () => {
-        setIsVisible(false);
-        sessionStorage.setItem('tg_modal_dismissed', 'true');
-    };
 
     if (!isVisible) return null;
 
@@ -131,9 +120,6 @@ const TelegramRedirectModal = () => {
                 <a href="https://t.me/premium_houses_bot" className="tg-modal-btn">
                     Botga o'tish
                 </a>
-                <button className="tg-modal-close" onClick={handleClose}>
-                    Brauzerda qolish
-                </button>
             </div>
         </div>
     );
